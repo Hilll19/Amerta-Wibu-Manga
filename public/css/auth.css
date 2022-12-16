@@ -1,0 +1,351 @@
+/**{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: "Open Sans";
+}
+
+/* This settiing class btn on btn display */
+/*.btn,
+.option-btn,
+.delete-btn,
+.white-btn{
+   display: inline-block;
+   margin-top: 1rem;
+   padding:1rem 3rem;
+   cursor: pointer;
+   color:var(--white);
+   font-size: 1.8rem;
+   border-radius: .5rem;
+   text-transform: capitalize;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover{
+   background-color: var(--black);
+}
+
+.white-btn,
+.btn{
+   background-color: var(--purple);
+}
+
+.option-btn{
+   background-color: var(--orange);
+}
+
+.delete-btn{
+   background-color: var(--red);
+}
+
+.white-btn:hover{
+   background-color: var(--white);
+   color:var(--black);
+}
+/* this message pop up */
+/*.message{
+    position: sticky;
+    top:0;
+    margin:0 auto;
+    max-width: 1200px;
+    background-color: var(--white);
+    padding:2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    gap:1.5rem;
+ }
+ 
+ .message span{
+    font-size: 2rem;
+    color:var(--black);
+ }
+ 
+ .message i{
+    cursor: pointer;
+    color:var(--red);
+    font-size: 2.5rem;
+ }
+ 
+ .message i:hover{
+    transform: rotate(90deg);
+ }
+
+section {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.form-container{
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    width: 380px;
+    padding: 50px 30px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 60px #000;
+    z-index: 1;
+}
+
+h3{
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2em;
+
+}
+.form-container form .box{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    color: #222;
+    border: none;
+    outline: none;
+    margin: 1em 0;
+}
+.form-container form [type="submit"]{
+    width: 100%;
+    border-radius: .2rem;
+    /* padding: 1.2rem 1.4rem; */
+   /* background: gray;
+    color: white;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1rem 0;
+}
+.form-container form p{
+    text-align: center;
+    padding-top: 1.1rem;
+    font-size: 1rem;
+ }
+
+ .login-box a:link, a:visited {
+   color: white;
+ }
+
+ .login-box a:hover {
+   color: gray;
+ }
+ */
+
+
+ html {
+   height: 100%;
+ }
+ body {
+   margin:0;
+   padding:0;
+   font-family: sans-serif;
+   background: linear-gradient(#141e30, #243b55);
+ }
+ 
+ .login-box {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 400px;
+   padding: 40px;
+   transform: translate(-50%, -50%);
+   background: rgba(0,0,0,.8);
+   box-sizing: border-box;
+   box-shadow: 0 15px 25px rgba(0,0,0,.8);
+   border-radius: 10px;
+ }
+ 
+ .login-box h2 {
+   margin: 0 0 30px;
+   padding: 0;
+   color: #fff;
+   text-align: center;
+ }
+ 
+ .login-box .user-box {
+   position: relative;
+ }
+ 
+ .login-box .user-box input {
+   width: 100%;
+   padding: 10px 0;
+   font-size: 16px;
+   color: #fff;
+   margin-bottom: 30px;
+   border: none;
+   border-bottom: 1px solid #fff;
+   outline: none;
+   background: transparent;
+ }
+
+ .login-box .user-box label {
+   position: absolute;
+   top:0;
+   left: 0;
+   padding: 10px 0;
+   font-size: 16px;
+   color: #fff;
+   pointer-events: none;
+   transition: .5s;
+ }
+ 
+ .login-box .user-box input:focus ~ label,
+ .login-box .user-box input:valid ~ label {
+   top: -20px;
+   left: 0;
+   color: #880808;
+   font-size: 12px;
+ }
+ 
+ .login-box form .btn-submit {
+   position: relative;
+   display: inline-block;
+   padding: 10px 20px;
+   color: #880808;
+   overflow: hidden;
+   transition: .5s;
+   margin-top: 40px;
+   letter-spacing: 4px
+ }
+ 
+ .submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .submit-button .btn-submit:hover {
+   background: #880808;
+   color: #fff;
+   border-radius: 5px;
+   box-shadow: 0 0 5px #880808,
+               0 0 25px #880808,
+               0 0 50px #880808,
+               0 0 100px #880808;
+ }
+ 
+ .submit-button .btn-submit span {
+   position: absolute;
+   display: block;
+ }
+ 
+ .submit-button .btn-submit span:nth-child(1) {
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(90deg, transparent, #880808);
+   animation: btn-anim1 1s linear infinite;
+ }
+ 
+ @keyframes btn-anim1 {
+   0% {
+     left: -100%;
+   }
+   50%,100% {
+     left: 100%;
+   }
+ }
+ 
+ .submit-button .btn-submit span:nth-child(2) {
+   top: -100%;
+   right: 0;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(180deg, transparent, #880808);
+   animation: btn-anim2 1s linear infinite;
+   animation-delay: .25s
+ }
+ 
+ @keyframes btn-anim2 {
+   0% {
+     top: -100%;
+   }
+   50%,100% {
+     top: 100%;
+   }
+ }
+ 
+ .submit-button .btn-submit span:nth-child(3) {
+   bottom: 0;
+   right: -100%;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(270deg, transparent, #880808);
+   animation: btn-anim3 1s linear infinite;
+   animation-delay: .5s
+ }
+ 
+ @keyframes btn-anim3 {
+   0% {
+     right: -100%;
+   }
+   50%,100% {
+     right: 100%;
+   }
+ }
+ 
+ .submit-button .btn-submit span:nth-child(4) {
+   bottom: -100%;
+   left: 0;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(360deg, transparent, #880808);
+   animation: btn-anim4 1s linear infinite;
+   animation-delay: .75s
+ }
+
+ .submit-button .btn-submit input {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #880808;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px
+ }
+
+ .submit-button .btn-submit input:hover {
+   color: #fff;
+ }
+ 
+ @keyframes btn-anim4 {
+   0% {
+     bottom: -100%;
+   }
+   50%,100% {
+     bottom: 100%;
+   }
+ }
+
+#bg-video {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   min-width: 100%;
+   min-height: 100%;
+}
+
+.register-now p{
+   color: white;
+}
+
+.login-box a:link, a:visited {
+   color: white;
+ }
+
+ .login-box a:hover {
+   color: gray;
+ }
