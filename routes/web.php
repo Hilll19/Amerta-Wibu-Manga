@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +19,7 @@ Route::get('/', [MainController::class, 'dashboard']);
 Route::get('/latest', [MainController::class, 'latest']);
 Route::get('/popular', [MainController::class, 'popular']);
 Route::get('/detailread', [MainController::class, 'detail']);
-Route::get('/profile', function () {
-    return view('profile');
-});
+Route::get('/profile', [ProfileController::class, 'index']);
 Route::get('/genre', function () {
     return view('#');
 });

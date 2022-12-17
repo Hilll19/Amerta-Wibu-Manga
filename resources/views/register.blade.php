@@ -34,9 +34,16 @@
             <label>Password</label>
           </div>
           <div class="user-box">
-            <input type="password" name="cpassword" required>
+            <input type="password" name="confirm_password" required>
             <label>Confirm Password</label>
           </div>
+
+          @if ($errors->has('pass_not_match'))
+            <div class="error-box">
+              <p>Password and confirm password not match</label>
+            </div>
+          @endif
+
           <div class="submit-button">
             <div class="btn-submit">
               <span></span>
@@ -46,6 +53,7 @@
               <input type="submit" name="submit" value="Register"/>
             </div>
           </div>
+
         </form>
         <div class="register-now">
           <p>Already have an account? <a href="/login">Login now</a></p>

@@ -349,3 +349,14 @@ h3{
  .login-box a:hover {
    color: gray;
  }
+
+ .error-box {
+    padding: 4px;
+    margin-bottom: 8px;
+    background: red;
+ }
+
+ .error-box p {
+    color: white;
+    text-align: center;
+ }

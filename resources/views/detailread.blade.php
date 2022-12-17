@@ -104,13 +104,13 @@
                                 <!-- TITLE -->
                                 <h1 class="text-[48px]">{{ $result['title'] }}</h1>
 
-                                <!-- SHORT DESC -->
-                                <p class="text-sm text-gray-200">
-                                    Isn’t Being A Wicked Woman Much Better?
+                                <!-- TIMESTAMP -->
+                                <p class="text-sm text-gray-200 mx-4">
+                                    Published {{ $result['published']['string'] }}
                                 </p>
 
                                 <!-- BUTTON -->
-                                <div class="py-2 flex mt-8">
+                                <div class="gap-4 py-2 flex mt-8">
                                     <button
                                         class="flex justify-center  max-h-max whitespace-nowrap focus:outline-none  focus:ring  focus:border-blue-300 rounded max-w-max text-gray-100 bg-red-500 hover:bg-gray-600 px-4 py-1 flex items-center hover:shadow-lg"><span
                                             class="mr-2">

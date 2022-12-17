@@ -85,7 +85,7 @@
                 </div>
                 
                 <div class="mt-8">
-                    <h1 class="font-bold text-center text-3xl text-gray-900">Resqi</h1>
+                    <h1 class="font-bold text-center text-3xl text-gray-900">{{ $user->name}}</h1>
                     <p class="text-center text-sm text-gray-400 font-medium">Wibbu Pemula</p>
                     <p>
                         <span>

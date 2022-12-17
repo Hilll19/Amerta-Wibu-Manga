@@ -36,6 +36,14 @@ class AuthController extends Controller
         ]);
            
         $data = $request->all();
+
+        // If the password and confirm password is not the same, just dont proceed
+        if($data['password'] !== $data['confirm_password']) {
+            return redirect()->back()->withErrors([
+                'pass_not_match' => 'Password and confirm password not match'
+              ]);
+        };
+
         $check = $this->create($data);
          
         return redirect("/")->withSuccess('You have signed-in');

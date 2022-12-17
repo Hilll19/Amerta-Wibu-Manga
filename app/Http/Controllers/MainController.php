@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class MainController extends Controller {
     public function dashboard() {
-        // IF USER ALREADY LOGIN
+        // IF USER NOT ALREADY LOGIN
         if(!Auth::check()){
             return redirect("login");
         }
