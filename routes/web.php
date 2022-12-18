@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\AdminAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,11 @@ Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
 /*
 |--------------------------------------------------------------------------
 */
+
+/*
+|--------------------------------------------------------------------------
+| Admin Routes
+|--------------------------------------------------------------------------
+*/
+Route::view('admin/login', 'admin/login');
+Route::post('admin/login', [AdminAuthController::class, 'processLogin'])->name('admin-login'); 

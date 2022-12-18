@@ -102,7 +102,7 @@
                             <!-- TITLE, DESC, ETC -->
                             <div class="flex flex-col mx-8 mt-[120px] justify-center">
                                 <!-- TITLE -->
-                                <h1 class="text-[48px]">{{ $result['title'] }}</h1>
+                                <h1 class="text-[48px] text-[#fff]">{{ $result['title'] }}</h1>
 
                                 <!-- TIMESTAMP -->
                                 <p class="text-sm text-gray-200 mx-4">
